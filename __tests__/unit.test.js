@@ -8,4 +8,16 @@ import {
   isHexColor,
 } from '../code-to-unit-test/unit-test-me';
 
-// TODO - Part 2
+test('checking real phone number', () => {
+    expect(isPhoneNumber("234-923-8923") == true);
+});
+test('checking fake phone number', () => {
+    expect(isPhoneNumber("23a23429343") == false);
+});
+
+test('checking weak password', () => {
+    expect(isStrongPassword("hithere") == false);
+});
+test('checking strong password', () => {
+    expect(isStrongPassword("98asdWEFughvisdsd892=-as3") == true);
+});
